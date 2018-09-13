@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import uk.chromis.custom.switches.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="775.0" type="HBox" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="mainPrinterLabel" prefHeight="25.0" prefWidth="110.0" text="printer">
+         <padding>
+            <Insets right="8.0" />
+         </padding>
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="printerCBox" prefHeight="25.0" prefWidth="200.0" />
+      <Pane fx:id="optionsPane" prefHeight="28.0" prefWidth="466.0">
+         <children>
+            <Label fx:id="modeLabel" layoutX="20.0" layoutY="2.0" prefHeight="25.0" prefWidth="60.0" text="mode" visible="false">
+               <padding>
+                  <Insets right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="portLabel" layoutX="205.0" prefHeight="25.0" prefWidth="60.0" text="port" visible="false">
+               <padding>
+                  <Insets right="8.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="modeCBox" layoutX="90.0" layoutY="2.0" prefWidth="100.0" visible="false" />
+            <ComboBox fx:id="portCBox" layoutX="265.0" layoutY="2.0" prefHeight="25.0" prefWidth="100.0" visible="false" />
+            <Label fx:id="printerLabel" layoutX="20.0" prefHeight="25.0" prefWidth="60.0" text="printer" visible="false">
+               <padding>
+                  <Insets right="8.0" />
+               </padding>
+            </Label>
+            <Label fx:id="drawerLabel" layoutX="206.0" prefHeight="25.0" prefWidth="50.0" text="drawer" visible="false">
+               <padding>
+                  <Insets right="8.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="printerText" layoutX="90.0" prefHeight="25.0" prefWidth="100.0" visible="false" />
+            <TextField fx:id="drawerText" layoutX="265.0" prefHeight="25.0" prefWidth="100.0" visible="false" />
+            <ComboBox fx:id="stdPrinter" layoutX="20.0" prefHeight="25.0" prefWidth="200.0" visible="false" />
+            <ToggleSwitch fx:id="receiptprinter" layoutX="230.0" layoutY="5.0" visible="false" />
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Pane>
+   </children>
+</fx:root>

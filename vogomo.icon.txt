@@ -1,0 +1,1 @@
+deploy.icon.native=C:/Users/Dell Dev 2/Documents/Vogomo/VogomoPOS_v81_20180620/vogomo.ico

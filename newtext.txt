@@ -1,0 +1,4 @@
+<html><center>Vogomo POS<br>
+Copyright © 2018 Vogomo Pte Ltd<br>
+http://www.vogomo.com/<br>
+</center>

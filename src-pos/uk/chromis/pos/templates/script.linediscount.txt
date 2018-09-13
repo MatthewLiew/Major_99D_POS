@@ -1,0 +1,49 @@
+// **************************************************************************
+// script.linediscount
+// -------------------
+// This script applies UsersInput %Discount for the Item Line value
+// To use in the sales screen: Highlight the line you want to discount
+// Then Tap in the %Discount amount and touch the % button
+// **************************************************************************
+//   VogomoPOS - PointOfSale
+//   Copyright (c) (c) 2015-2018  
+//
+//   This file is part of VogomoPOS
+//
+//   www.vogomo.com
+//   
+//   edited by: Matthew
+
+import uk.chromis.format.Formats;
+import uk.chromis.pos.ticket.TicketLineInfo;
+import uk.chromis.pos.ticket.TicketProductInfo;
+
+discountrate = (sales.getInputValue())/100;                                          // Edited By Matthew
+
+index = sales.getSelectedIndex();
+
+if (index >= 0) {
+    if (ticket.getTotal() > 0.0 && discountrate > 0.0) {
+        sdiscount = Formats.PERCENT.formatValue((discountrate));                     // Edited By Matthew
+   
+            line = ticket.getLine(index);
+
+            if (line.canDiscount()){
+                    ticket.insertLine(index+1,                                       // Edited By Matthew
+            new TicketLineInfo(
+                    line.getProductID(),
+                    "Item Discount - " + sdiscount,                                  // Edited By Matthew
+                    line.getProductTaxCategoryID(),
+                    line.getMultiply(),
+                    -(double)Math.rint(line.getPrice() * discountrate *100) /100d,   // Edited By Matthew
+                    line.getTaxInfo()
+					)); 
+                    line.setDiscounted("yes");
+			}
+			
+    } else {
+         java.awt.Toolkit.getDefaultToolkit().beep();
+    }
+} else {
+    java.awt.Toolkit.getDefaultToolkit().beep();
+}

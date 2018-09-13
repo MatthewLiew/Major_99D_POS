@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="325.0" type="HBox" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="leadingPane" prefHeight="25.0" prefWidth="35.0">
+         <children>
+            <Separator fx:id="leadingSeparator" layoutY="11.0" prefWidth="30.0" />
+         </children>
+      </Pane>
+      <Label fx:id="label" prefHeight="25.0" prefWidth="56.0" text="Label">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <padding>
+            <Insets left="6.0" />
+         </padding></Label>
+      <Pane fx:id="trailingPane" prefHeight="25.0" prefWidth="213.0">
+         <children>
+            <Separator fx:id="trailingSeparator" layoutX="4.0" layoutY="11.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+   </children>
+</fx:root>
