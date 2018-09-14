@@ -108,17 +108,19 @@ public class StartPOS {
         }
         
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyMMdd-HHmm-");
-        if (args.length != 0) {
-            if (args[0].equalsIgnoreCase("/debug")) {
+        // Edited by Matthew
+        //if (args.length != 0) {
+            //if (args[0].equalsIgnoreCase("/debug")) {
                 //send output to log files
                 try {
-                    System.setErr(new PrintStream(new FileOutputStream(currentPath + "/Logs/" + simpleDateFormat.format(new Date()) + "Chromis.log")));
+                    System.setErr(new PrintStream(new FileOutputStream(currentPath + "/Logs/" + simpleDateFormat.format(new Date()) + "vpos.log")));
                 } catch (FileNotFoundException ex) {
                     Logger.getLogger(StartPOS.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-        }
-
+            //}
+        //}
+        Logger.getLogger(StartPOS.class.getName()).log(Level.INFO, "Directory: " + currentPath);
+        
         File newIcons = null;
         if (AppConfig.getInstance().getProperty("icon.colour") == null || AppConfig.getInstance().getProperty("icon.colour").equals("")) {
             newIcons = new File(currentPath + "/Icon sets/blue/images.jar");
